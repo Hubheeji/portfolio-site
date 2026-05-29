@@ -110,13 +110,17 @@ window.addEventListener('keydown', (e) => {
 
 // 팀 영상 재생 버튼
 const video = document.querySelector('.film-video');
-const playBtn = document.getElementById('playBtn');
 
-if (video && playBtn) {
-  playBtn.addEventListener('click', () => {
-    video.muted = false;
-    video.controls = true;
-    video.play();
+const filmWrap = document.querySelector('.film-video-wrap');
+const cleanBtn = document.getElementById('cleanBtn');
+
+if (filmWrap && cleanBtn) {
+  cleanBtn.addEventListener('click', () => {
+    filmWrap.classList.toggle('clean-view');
+
+    cleanBtn.textContent = filmWrap.classList.contains('clean-view')
+      ? '◑ Overlay View'
+      : '◐ Clear View';
   });
 }
 

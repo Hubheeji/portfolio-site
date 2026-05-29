@@ -65,6 +65,7 @@
           </div>
 
           <a href="#projects" class="hero-btn">Exhibition View</a>
+          <a href="#campaignFilm" class="hero-btn">View Campaign Film</a>
           <p class="scroll-hint">Scroll to explore</p>
         </div>
 
@@ -99,7 +100,7 @@
 
         <div class="video-banner">
           <video autoplay muted loop playsinline>
-            <source src="video/main-video.mp4" type="video/mp4" />
+            <source src="video/campaign-film.mp4" type="video/mp4" />
             브라우저가 video 태그를 지원하지 않습니다.
           </video>
 
@@ -108,8 +109,10 @@
               <p class="video-label">FEATURED FILM</p>
               <h3>작품의 흐름과 화면의 구조를 기록하다</h3>
               <p>
-                영상 작업 또는 포트폴리오 쇼릴이 들어갈 수 있는 메인 배너 영역입니다.
+                스마트폰 중독을 주제로 제작한 팀 캠페인 영상입니다.<br>
+                현실과 가상의 경계를 통해 현대인의 모습을 표현했습니다.
               </p>
+              <a href="#campaignFilm" class="film-go-btn">View Campaign Film</a>
             </div>
           </div>
         </div>
@@ -196,10 +199,10 @@
         </div>
 
         <!-- TEAM PROJECT : FILM -->
-        <div class="film-project reveal">
+        <div class="film-project reveal" id="campaignFilm">
           <div class="film-video-wrap">
-            <video class="film-video" muted loop playsinline>
-              <source src="video/main-video.mp4" type="video/mp4" />
+            <video class="film-video" muted loop playsinline controls>
+              <source src="video/campaign-film.mp4" type="video/mp4" />
               브라우저가 video 태그를 지원하지 않습니다.
             </video>
 
@@ -211,7 +214,11 @@
                 우리는 보고 있지만, 현실을 잃고 있습니다
               </p>
 
-              <button class="film-play-btn" id="playBtn">▶ Watch Film</button>
+              <div class="film-buttons">
+                <button class="film-clean-btn" id="cleanBtn">
+                  ◐ Cinema Mode
+                </button>
+              </div>
             </div>
           </div>
 
@@ -242,10 +249,11 @@
             data-tech="React,CSS,JavaScript"
             data-image="images/project1.jpg"
             data-live="https://teamnature-gflr.vercel.app/"
-            data-github="https://github.com/Novabornas002/teamnature"
+            data-github="https://github.com/Novabornas002/teamnature">
+          
 
             <div class="project-thumb">
-              <img src="images/project1.png" alt="THE NORTH FACE 팀 프로젝트 대표 이미지" />
+              <img src="images/project1.jpg" alt="THE NORTH FACE 팀 프로젝트 대표 이미지" />
               <div class="thumb-frame"></div>
               <div class="thumb-overlay">
                 <span>01</span>

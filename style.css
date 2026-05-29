@@ -431,12 +431,6 @@ video {
   pointer-events: none;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  border-color: rgba(224, 195, 135, 0.38);
-  box-shadow: 0 22px 54px rgba(0,0,0,0.3);
-}
-
 .project-thumb {
   position: relative;
   height: 270px;
@@ -559,23 +553,36 @@ video {
 }
 
 .project-links a {
-  display: inline-block;
-  padding: 8px 14px;
-  border: 1px solid rgba(201, 171, 109, 0.3);
-  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 95px;
+  height: 40px;
+
+  border: 1px solid #c9ab6d;
+  border-radius: 6px;
+
+  background: rgba(201,171,109,0.08);
+
+  color: #e0c387;
   text-decoration: none;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  background: rgba(255,255,255,0.02);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
   transition: all 0.3s ease;
-  position: relative;
-  z-index: 5;
 }
 
 .project-links a:hover {
-  background: rgba(201, 171, 109, 0.12);
-  border-color: rgba(201, 171, 109, 0.6);
-  color: #fff;
+  background: #c9ab6d;
+  color: #111;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 15px rgba(201,171,109,0.35),
+    0 4px 15px rgba(0,0,0,0.3);
 }
 
 /* contact */
@@ -1049,5 +1056,76 @@ video {
 .reveal.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.project-card.reveal.show:hover {
+  transform: translateY(-10px);
+  border-color: rgba(224, 195, 135, 0.38);
+  box-shadow: 0 22px 54px rgba(0,0,0,0.3);
+}
+
+.film-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.film-clean-btn {
+  width: fit-content;
+  padding: 12px 24px;
+  border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.film-clean-btn:hover {
+  background: rgba(255,255,255,0.9);
+  color: #111;
+}
+
+.film-video-wrap.clean-view .film-overlay {
+  background: transparent;
+  pointer-events: none;
+}
+
+.film-video-wrap.clean-view .film-label,
+.film-video-wrap.clean-view .film-overlay h3,
+.film-video-wrap.clean-view .film-desc {
+  opacity: 0;
+}
+
+.film-video-wrap.clean-view .film-buttons {
+  opacity: 1;
+  pointer-events: auto;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  left: auto;
+  bottom: auto;
+  z-index: 10;
+}
+
+.film-video-wrap.clean-view .film-video {
+  filter: brightness(1) contrast(1);
+}
+
+.film-go-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 12px 24px;
+  border: 1px solid #c9ab6d;
+  color: #c9ab6d;
+  text-decoration: none;
+  background: rgba(201,171,109,0.08);
+  transition: 0.3s;
+}
+
+.film-go-btn:hover {
+  background: #c9ab6d;
+  color: #111;
 }
 
